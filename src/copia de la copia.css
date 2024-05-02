@@ -2,10 +2,13 @@
 
 .container {
   min-height: 100vh;
-  display: flex;
+  display: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 40rem;
+  padding: 1rem;
+  padding-bottom: 0;
 }
 
 .main {
