@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import documents1 from './documents1.png'
-import fingerprint1 from "../fingerprint1.png";
-import graph1 from "./graph1.png";
-import highway1 from "./highway1.png";
-import lock from "./lock.png";
+import documents1 from './assets/documents1.png'
+import fingerprint1 from "./assets/fingerprint1.png";
+import graph1 from "./assets/graph1.png";
+import highway1 from "./assets/highway1.png";
+import lock from "./assets/lock.png";
 import styles from "./onboarding.module.css";
 
 const iconPositions = [
