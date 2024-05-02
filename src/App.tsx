@@ -32,30 +32,32 @@ export default function OnBoarding() {
             {iconPositions.map((icon) => {
               const position = calculatePosition(icon.angle);
               return (
-                <img
-                  key={icon.id}
-                  src={
-                    icon.id === "documents1"
-                      ? documents1
-                      : icon.id === "fingerprint1"
-                      ? fingerprint1
-                      : icon.id === "graph1"
-                      ? graph1
-                      : icon.id === "highway1"
-                      ? highway1
-                      : lock
-                  }
-                  alt={icon.id}
-                  width={100}
-                  height={100}
-                  className={styles.icon}
-                  style={{
-                    position: "absolute",
-                    top: position.y,
-                    left: position.x,
-                    transform: `rotate(${angle}deg)`,
-                  }}
-                />
+                <a href="https://portfolio.jiacode.dev/">
+                  <img
+                    key={icon.id}
+                    src={
+                      icon.id === "documents1"
+                        ? documents1
+                        : icon.id === "fingerprint1"
+                        ? fingerprint1
+                        : icon.id === "graph1"
+                        ? graph1
+                        : icon.id === "highway1"
+                        ? highway1
+                        : lock
+                    }
+                    alt={icon.id}
+                    width={100}
+                    height={100}
+                    className={styles.icon}
+                    style={{
+                      position: "absolute",
+                      top: position.y,
+                      left: position.x,
+                      transform: `rotate(${angle}deg)`,
+                    }}
+                  />
+                </a>
               );
             })}
           </div>
