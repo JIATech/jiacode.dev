@@ -5,6 +5,7 @@ import graph1 from "./assets/graph1.png";
 import highway1 from "./assets/highway1.png";
 import lock from "./assets/lock.png";
 import styles from "./onboarding.module.css";
+import Footer from './footer';
 
 const iconPositions = [
   { id: "documents1", angle: 0 },
@@ -63,23 +64,7 @@ export default function OnBoarding() {
             </div>
           </div>
         </a>
-        <footer className={styles.footer}>
-          Usted está ingresando al sistema de JIA Code. <br />
-          Por favor, espere un momento.
-          <br />
-          Sentado.
-          <br />
-          O acostado, si prefiere.
-          <br />
-          O de pie, si es lo que le gusta.
-          <br />
-          O bailando, si es lo que le hace feliz.
-          <br />
-          O saltando, si es lo que le divierte.
-          <br />
-          O... bueno, usted entiende.
-          <br />
-        </footer>
+        <Footer />
       </main>
     </div>
   );

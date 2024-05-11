@@ -73,6 +73,7 @@
   animation: rotacion-inversa 10s linear infinite;
 }
 
+
 .footer {
   font-family: 'Roboto', sans-serif;
   width: 100%;
@@ -81,8 +82,8 @@
   display: relative;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
-  font-weight: thin;
+  font-size: 16px;
+  font-weight: bold;
   text-align: center;
   font-style: italic;
   margin-top: 10rem;
@@ -105,8 +106,24 @@
   .container {
     margin-left: 20rem;
   }
+}
 
+.phrase {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease;
+  margin-top: 10rem;
+}
+
+.phrase.active {
+  opacity: 0.8;
+}
+
+
+/* Media query para pantallas pequeñas (móvil) */
+@media (max-width: 768px) {
   .footer {
-    margin-top: 7rem;
+    padding: 0.5rem;
   }
+
 }
