@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import styles from "./onboarding.module.css";
 
-const Footer: React.FC = () => {
+const HeaderPhrases: React.FC = () => {
   const phrases = useMemo(
     () => [
       "Usted está ingresando al sistema de JIA Code.",
@@ -35,19 +35,19 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-      <div className={styles.phraseContainer}>
-        {phrasesRef.current.map((phrase, index) => (
-          <p
-            key={index}
-            className={`${styles.phrase} ${
-              index === currentPhraseIndex ? styles.active : ""
-            }`}
-          >
-            {phrase}
-          </p>
-        ))}
-      </div>
+    <div className={styles.phraseContainer}>
+      {phrasesRef.current.map((phrase, index) => (
+        <p
+          key={index}
+          className={`${styles.phrase} ${
+            index === currentPhraseIndex ? styles.active : ""
+          }`}
+        >
+          {phrase}
+        </p>
+      ))}
+    </div>
   );
-}
+};
 
-export default Footer;
+export default HeaderPhrases;
