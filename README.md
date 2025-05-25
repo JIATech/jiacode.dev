@@ -1,30 +1,89 @@
-# React + TypeScript + Vite
+# jiacode.dev - Personal Branding & Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive landing page built with React + TypeScript + Vite + Tailwind CSS showcasing J.I.A.'s personal brand and professional services.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Mobile-first approach with smooth animations
+- **Modern Tech Stack**: React 18, TypeScript, Vite, Tailwind CSS
+- **Interactive Components**: Filterable portfolio, contact forms, smooth scrolling
+- **SEO Optimized**: Meta tags, Open Graph, structured data
+- **Performance**: Fast loading with Vite's HMR and optimized builds
+- **Accessibility**: ARIA labels, keyboard navigation, semantic HTML
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend**: React 18 + TypeScript
+- **Styling**: Tailwind CSS + Custom CSS animations
+- **Build Tool**: Vite
+- **Icons**: Lucide React
+- **Fonts**: Inter (main) + Fira Code (monospace)
 
-- Configure the top-level `parserOptions` property like this:
+## 📦 Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+# Clone the repository
+git clone <repository-url>
+cd jiacode.dev
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🎨 Sections
+
+1. **Hero**: Animated intro with code display and call-to-action
+2. **About**: Skills, stats, and professional timeline
+3. **Services**: Web development, automation, consulting services
+4. **Portfolio**: Filterable project showcase with external links
+5. **Contact**: Contact form and professional information
+6. **Footer**: Social links, newsletter signup, and branding
+
+## 🔧 Development
+
+The project uses:
+- **Vite** for fast development and building
+- **TypeScript** for type safety
+- **Tailwind CSS** for utility-first styling
+- **ESLint** for code quality
+- **Component-based architecture** for maintainability
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── Navigation.tsx   # Fixed navigation with mobile menu
+│   ├── Hero.tsx        # Landing section
+│   ├── About.tsx       # About and skills
+│   ├── Services.tsx    # Services showcase
+│   ├── Portfolio.tsx   # Project portfolio
+│   ├── Contact.tsx     # Contact form
+│   └── Footer.tsx      # Site footer
+├── App.tsx             # Main app component
+├── App.css             # Global styles
+└── main.tsx            # App entry point
+```
+
+## 🌐 Deployment
+
+Build the project for production:
+
+```bash
+npm run build
+```
+
+The `dist` folder will contain all the files ready for deployment to any static hosting service.
+
+## 📄 License
+
+Personal project for jiacode.dev branding and portfolio showcase.

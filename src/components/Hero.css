@@ -1,0 +1,497 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  filter: hue-rotate(0deg) saturate(1) brightness(1);
+  animation: psychedelicFlames 20s ease-in-out infinite;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(120, 119, 198, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(138, 43, 226, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 10% 20%, rgba(75, 0, 130, 0.18) 0%, transparent 45%);
+  filter: hue-rotate(0deg) brightness(1) contrast(1);
+  animation: psychedelicWaves 25s ease-in-out infinite, backgroundMove 35s ease-in-out infinite;
+}
+
+@keyframes backgroundMove {
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg) scale(1); 
+  }
+  25% { 
+    transform: translate(8px, -5px) rotate(0.5deg) scale(1.01); 
+  }
+  50% { 
+    transform: translate(-4px, 6px) rotate(-0.3deg) scale(0.99); 
+  }
+  75% { 
+    transform: translate(5px, -8px) rotate(0.4deg) scale(1.005); 
+  }
+}
+
+/* Llamas psicodélicas con transiciones REALES */
+@keyframes psychedelicFlames {
+  0% {
+    filter: hue-rotate(0deg) saturate(1) brightness(1) contrast(1);
+  }
+  16.66% {
+    filter: hue-rotate(15deg) saturate(1.1) brightness(1.05) contrast(1.02);
+  }
+  33.33% {
+    filter: hue-rotate(30deg) saturate(1.2) brightness(1.1) contrast(1.05);
+  }
+  50% {
+    filter: hue-rotate(45deg) saturate(1.15) brightness(1.08) contrast(1.03);
+  }
+  66.66% {
+    filter: hue-rotate(25deg) saturate(1.05) brightness(1.03) contrast(1.01);
+  }
+  83.33% {
+    filter: hue-rotate(10deg) saturate(0.95) brightness(0.98) contrast(0.99);
+  }
+  100% {
+    filter: hue-rotate(0deg) saturate(1) brightness(1) contrast(1);
+  }
+}
+
+/* Ondas psicodélicas suaves para círculos */
+@keyframes psychedelicWaves {
+  0% {
+    filter: hue-rotate(0deg) brightness(1) contrast(1);
+    transform: translate(0, 0) scale(1);
+  }
+  20% {
+    filter: hue-rotate(20deg) brightness(1.1) contrast(1.1);
+    transform: translate(3px, -2px) scale(1.02);
+  }
+  40% {
+    filter: hue-rotate(40deg) brightness(1.15) contrast(1.15);
+    transform: translate(-2px, 4px) scale(0.98);
+  }
+  60% {
+    filter: hue-rotate(30deg) brightness(1.08) contrast(1.08);
+    transform: translate(4px, 1px) scale(1.01);
+  }
+  80% {
+    filter: hue-rotate(10deg) brightness(1.02) contrast(1.02);
+    transform: translate(-1px, -3px) scale(0.99);
+  }
+  100% {
+    filter: hue-rotate(0deg) brightness(1) contrast(1);
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.hero-text {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 10;
+}
+
+/* Estilos específicos para el gradient-text en el hero */
+.hero-title .gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 25%, #e2e8f0 50%, #f1f5f9 75%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 
+    0 0 30px rgba(255, 255, 255, 0.8),
+    0 0 60px rgba(255, 255, 255, 0.5),
+    2px 2px 8px rgba(0, 0, 0, 0.2),
+    -1px -1px 2px rgba(255, 255, 255, 0.3);
+  font-weight: 900;
+  position: relative;
+  filter: 
+    drop-shadow(0 0 15px rgba(255, 255, 255, 0.6))
+    drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  animation: subtleGlow 3s ease-in-out infinite;
+}
+
+.hero-title .gradient-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  z-index: -1;
+  transform: translate(3px, 3px);
+  opacity: 0.9;
+  filter: blur(1px);
+}
+
+/* Animación sutil de resplandor para J.I.A. */
+@keyframes subtleGlow {
+  0%, 100% {
+    filter: 
+      drop-shadow(0 0 15px rgba(255, 255, 255, 0.6))
+      drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  }
+  50% {
+    filter: 
+      drop-shadow(0 0 25px rgba(255, 255, 255, 0.8))
+      drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.7));
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Estilos mejorados para botones en el hero contra fondo psicodélico */
+.hero .btn-primary {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  color: #1e293b;
+  padding: 14px 28px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  text-shadow: none;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  animation: buttonGlow 4s ease-in-out infinite;
+}
+
+.hero .btn-primary:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(255, 255, 255, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+}
+
+.hero .btn-secondary {
+  background: rgba(15, 23, 42, 0.8);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(255, 255, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1e293b;
+  border-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(255, 255, 255, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  text-shadow: none;
+}
+
+/* Animación sutil de resplandor para botones */
+@keyframes buttonGlow {
+  0%, 100% {
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    box-shadow: 
+      0 10px 36px rgba(0, 0, 0, 0.35),
+      0 0 30px rgba(255, 255, 255, 0.7),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out 0.8s forwards;
+}
+
+.floating-card {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  animation: gentleFloat 8s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+  }
+  25% { 
+    transform: translateY(-10px) scale(1.02);
+  }
+  50% { 
+    transform: translateY(-15px) scale(1.03);
+  }
+  75% { 
+    transform: translateY(-8px) scale(1.01);
+  }
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.card-dots span:first-child {
+  background: #ff5f57;
+  box-shadow: 0 0 10px rgba(255, 95, 87, 0.3);
+}
+
+.card-dots span:nth-child(2) {
+  background: #ffbd2e;
+  box-shadow: 0 0 10px rgba(255, 255, 46, 0.3);
+}
+
+.card-dots span:last-child {
+  background: #28ca42;
+  box-shadow: 0 0 10px rgba(40, 202, 66, 0.3);
+}
+
+.card-content {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.code-line {
+  margin-bottom: 0.5rem;
+}
+
+.code-line.indent {
+  padding-left: 2rem;
+}
+
+.code-keyword {
+  color: #ff79c6;
+}
+
+.code-variable {
+  color: #8be9fd;
+}
+
+.code-operator {
+  color: #ff79c6;
+}
+
+.code-property {
+  color: #50fa7b;
+}
+
+.code-string {
+  color: #f1fa8c;
+}
+
+.code-number {
+  color: #bd93f9;
+  transition: color 0.3s ease;
+  text-shadow: 0 0 3px rgba(189, 147, 249, 0.2);
+}
+
+.code-number:hover {
+  color: #e879ff;
+  text-shadow: 0 0 8px rgba(189, 147, 249, 0.4);
+}
+
+.code-array {
+  color: #ffb86c;
+}
+
+/* Estilos para el contador en tiempo real */
+.code-microseconds {
+  color: #ff79c6;
+  font-weight: 600;
+  opacity: 0.8;
+  animation: microsecondPulse 0.05s ease-in-out infinite;
+  text-shadow: 0 0 5px rgba(255, 121, 198, 0.3);
+}
+
+@keyframes microsecondPulse {
+  0%, 100% { 
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  position: relative;
+}
+
+.wheel {
+  width: 3px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll 2s infinite;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .floating-card {
+    max-width: 300px;
+  }
+}
